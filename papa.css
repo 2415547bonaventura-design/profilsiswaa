@@ -1,0 +1,306 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.navbar{
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-size: 28px;
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.nav-menu{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-menu a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover{
+  color: #60a5fa;
+}
+
+/* HERO */
+
+.hero{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 20px;
+
+  background:
+  radial-gradient(circle at top left, #2563eb, transparent 30%),
+  radial-gradient(circle at bottom right, #7c3aed, transparent 30%);
+}
+
+.hero-text{
+  max-width: 700px;
+}
+
+.hero-text h1{
+  font-size: 70px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-text span{
+  color: #60a5fa;
+}
+
+.hero-text p{
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.hero-btn{
+  display: inline-block;
+  padding: 15px 35px;
+
+  background: #2563eb;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.hero-btn:hover{
+  transform: translateY(-5px);
+  background: #1d4ed8;
+}
+
+/* PROJECT */
+
+.project-section{
+  width: 90%;
+  margin: auto;
+  padding: 120px 0;
+}
+
+.section-title{
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 70px;
+}
+
+.project-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  gap: 35px;
+}
+
+.project-card{
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.4s;
+}
+
+.project-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.project-card img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-content{
+  padding: 25px;
+}
+
+.project-content h3{
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-content p{
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.project-btn{
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  background: #2563eb;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.project-btn:hover{
+  background: #1d4ed8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+  .navbar{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-text h1{
+    font-size: 45px;
+  }
+
+  .hero-text p{
+    font-size: 16px;
+  }
+
+  .section-title{
+    font-size: 35px;
+  }
+
+}
+/* PROFILE IMAGE */
+
+.profile-img{
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 5px solid #60a5fa;
+
+  margin-bottom: 30px;
+}
+
+/* ABOUT */
+
+.about-section{
+  width: 90%;
+  margin: auto;
+  padding: 120px 0;
+}
+
+.about-container{
+  max-width: 800px;
+  margin: auto;
+
+  text-align: center;
+
+  background: rgba(255,255,255,0.05);
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  line-height: 1.9;
+
+  color: #cbd5e1;
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* NILAI */
+
+.nilai-section{
+  width: 90%;
+  margin: auto;
+  padding-bottom: 120px;
+}
+
+.nilai-container{
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(200px,1fr));
+
+  gap: 25px;
+}
+
+.nilai-card{
+  background: rgba(255,255,255,0.05);
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  transition: 0.3s;
+}
+
+.nilai-card:hover{
+  transform: translateY(-10px);
+}
+
+.nilai-card h3{
+  margin-bottom: 15px;
+}
+
+.nilai-card p{
+  font-size: 40px;
+  font-weight: bold;
+
+  color: #60a5fa;
+}
